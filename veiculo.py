@@ -1,3 +1,5 @@
+#Arthur Vinicius Gouvea Sandim
+#21204602
 class Veiculo:
     def __init__(self, marca, modelo, cor, placa, dono):
         self.marca = marca
@@ -27,19 +29,9 @@ class Veiculo:
         self.placa = nova_placa
     def setDono(self, novo_dono):
         self.dono = novo_dono
-        
-    def mostra_dados(self):
-        print()
-        print(f"Tipo: {self.tipo}")
-        print(f"Marca: {self.marca}")
-        print(f"Modelo: {self.modelo}")
-        print(f"Cor: {self.cor}")
-        print(f"Placa: {self.placa}")
-        print(f"Proprietário: {self.dono}")
-        print()
 
     
-class Carro(Veiculo):
+class Carro(Veiculo):#herança
     def __init__(self, marca, modelo, cor, placa, dono):
         super().__init__(marca, modelo, cor, placa, dono)
         self.tipo = 'Carro'
@@ -49,8 +41,19 @@ class Carro(Veiculo):
 
     def setTipo(self, novo_tipo):
         self.tipo = novo_tipo
+        
+    def mostra_dados(self):#polimorfismo
+        print()
+        print(f"Tipo: {self.tipo}")
+        print(f"Marca: {self.marca}")
+        print(f"Modelo: {self.modelo}")
+        print(f"Cor: {self.cor}")
+        print(f"Placa: {self.placa}")
+        print(f"Proprietário: {self.dono}")
+        print()
 
-class Moto(Veiculo):
+
+class Moto(Veiculo):#herança
     def __init__(self, marca, modelo, cor, placa, dono):
         super().__init__(marca, modelo, cor, placa, dono)
         self.tipo = 'Moto'
@@ -60,3 +63,13 @@ class Moto(Veiculo):
 
     def setTipo(self, novo_tipo):
         self.tipo = novo_tipo
+        
+    def mostra_dados(self):#polimorfismo
+        print()
+        print(f"Tipo: {self.tipo}")
+        print(f"Marca: {self.marca}")
+        print(f"Modelo: {self.modelo}")
+        print(f"Cor: {self.cor}")
+        print(f"Placa: {self.placa}")
+        print(f"Proprietário: {self.dono}")
+        print()
